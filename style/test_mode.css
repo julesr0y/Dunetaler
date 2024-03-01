@@ -1,0 +1,97 @@
+/*Insertion de la police, ne pas modifier*/
+@font-face 
+{
+    font-family: 'arKkos';
+    src: url('../font/arkkos_gmimi-webfont.woff2') format('woff2'),
+         url('../font/arkkos_gmimi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*
+{
+  color: white;
+  font-family: 'arkKos';
+}
+
+body 
+{
+    /* on place le background-color dans body pour éviter d'interférer avec l'image du joueur */
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text grid-container";
+    height: 95vh;
+}
+
+.text
+{
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container
+{
+  grid-area: grid-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grille {
+    display: grid;
+  }
+  
+.case {
+    position: relative;
+}
+
+.point {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.joueur{
+    height: 40px;
+    width: auto;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#find_element
+{
+  text-align: center;
+}
+
+.status{
+  padding-left: 45%;
+}
+
+#dialog{
+  background-color: black;
+  border: solid white;
+  position: absolute;
+  max-width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  padding: 2%;
+  display: none;
+}
+
+#dialog > button{
+  border: none;
+  background-color: black;
+}

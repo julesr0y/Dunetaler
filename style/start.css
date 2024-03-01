@@ -1,0 +1,185 @@
+/*Insertion de la police, ne pas modifier*/
+@font-face 
+{
+    font-family: 'arKkos';
+    src: url('../font/arkkos_gmimi-webfont.woff2') format('woff2'),
+         url('../font/arkkos_gmimi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*
+{
+    background-color: black;
+    color: white;
+    font-family: 'arKkos';
+    text-decoration: none;
+    font-size: 30px;
+}
+
+body /* règle la taille du texte */
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+                "  .      .         .     time      time       .        .      ."
+                "  .     nom       nom      .        .       rules    rules    ."
+                "score  score       .       .        .         .       map    map"
+                "  .   settings  settings   .        .      continue  continue ."
+                "  .      .      account  account disconnect disconnect   .      .";
+    text-align: center;
+    gap: 60px;
+}
+
+.time
+{
+    grid-area: time;
+}
+
+.rules
+{
+    grid-area: rules;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.rules:hover, .rules:focus, .rules:active
+{
+    text-shadow: 0 0 5px rgba(255, 165, 0, 1.25);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.map
+{
+    grid-area: map;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.map:hover, .map:focus, .map:active
+{
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1.25);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.continue
+{
+    grid-area: continue;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.continue:hover, .continue:focus, .continue:active
+{
+    text-shadow: 0 0 5px rgba(160, 32, 240, 0.90);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.disconnect
+{
+    grid-area: disconnect;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.disconnect:hover, .disconnect:focus, .disconnect:active
+{
+    text-shadow: 0 0 5px rgba(255, 0, 0, 1.25);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.account
+{
+    grid-area: account;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.account:hover, .account:focus, .account:active
+{
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1.25);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.settings
+{
+    grid-area: settings;
+    color: grey;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.settings:hover, .settings:focus, .settings:active
+{
+    text-shadow: 0 0 5px rgba(128, 128, 128, 1.25);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.score
+{
+    grid-area: score;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.score:hover, .score:focus, .score:active
+{
+    text-shadow: 0 0 5px rgba(160, 32, 240, 0.90);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.nom
+{
+    grid-area: nom;
+}
+
+.player_img
+{
+    height: 200px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.disconnect > a
+{
+    color: red;
+}
+
+.score > a
+{
+    color: blue;
+}
+
+.continue > a
+{
+    color: purple;
+}
+
+.settings > a
+{
+    color: grey;
+}
+#exit{
+    position: absolute;
+    left: -51.3%;
+    top: -9%;
+    color: gray;
+    font-size:20px;
+}
+#boutonesc{
+    background-color: white;
+    font-size: 15px;
+    color: black;
+}

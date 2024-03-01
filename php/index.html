@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../style/accueil.css">
+        <link rel="icon" href="../img/dunetaler_logo.png">
+        <meta name="viewport" content="width=device-witdh, initial-scale=1">
+        <title>Dunetaler</title>
+    </head>
+<body>
+  <div class="popupmain"></div>
+    <button id="openPopup">Turn On Music</button>
+    <div id="popup">
+      <div id="popupContent">
+        <audio controls id="audioPlayer">
+          <source controls src="../musics/accueil.ogg" type="audio/ogg">
+        </audio><button id="closePopup">Close</button>
+        <script>
+          function getCookie(name) {
+              var cookieArr = document.cookie.split(";");
+  
+              for (var i = 0; i < cookieArr.length; i++) {
+                  var cookiePair = cookieArr[i].split("=");
+  
+                  if (name === cookiePair[0].trim()) {
+                      return decodeURIComponent(cookiePair[1]);
+                  }
+              }
+  
+              return null;
+          }
+  
+          // Récupérer la valeur du volume à partir du cookie
+          var volume = getCookie("musicVolume");
+  
+          // Appliquer la valeur du volume à l'élément audio
+          var audioElement = document.getElementById("audioPlayer");
+          audioElement.volume = volume / 100;
+      </script>
+      </div>
+    </div>
+  </div>
+  <conteneur>
+    <img id="logo" src="../img/logo_descente_studio.webp" alt="logo">
+    <p id="intro">
+      Vous presente
+      <p id="nom">
+        Dunetaler
+      </p>
+    </p>   
+    <img id="lab" src="../img/Capture.webp" alt="labyrinthe">
+    <p id="enter">
+      Press 
+      <a id='lien' href="connexion.php">Enter</a> 
+      to play 
+    </p>
+  </conteneur>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="../scripts/index.js"></script>
+<script>
+  function getCookie(name) {
+    var cookieArr = document.cookie.split(";");
+
+    for (var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+
+        if (name === cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+
+    return null;
+  }
+
+  // Récupérer la valeur du volume à partir du cookie
+  var volume = getCookie("musicVolume");
+
+  // Appliquer la valeur du volume à l'élément audio
+  var audioElement = document.getElementById("audio");
+  audioElement.volume = volume / 100;
+  document.addEventListener("keydown", function(event) {
+    if (event.keyCode == 13) {
+      window.location.href = "connexion.php";
+    }
+  });
+</script>
+</html>

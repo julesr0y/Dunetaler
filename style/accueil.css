@@ -1,0 +1,107 @@
+/*Insertion de la police, ne pas modifier*/
+@font-face {
+  font-family: 'arKkos';
+  src: url('../font/arkkos_gmimi-webfont.woff2') format('woff2'),
+       url('../font/arkkos_gmimi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+ 
+body /* règle la taille du texte */
+{
+    background-color: black;
+    font-family: 'verdana';
+}
+.conteneur{
+  position: relative;
+  left :50%;
+  top : 50%;
+  border-color: white;
+  display: flex;
+
+}
+
+#logo{
+  display: block; /* Assurez-vous que l'image est un élément de type bloc */
+  margin-left: auto; /* Définissez la marge gauche sur "auto" */
+  margin-right: auto; /* Définissez la marge droite sur "auto" */
+  top: 3vh;
+  height: auto;
+  width: 15vw;
+  align-items: center;
+  justify-content: center;
+}
+
+*{
+  font-family: 'arKkos';  
+}
+p{
+  color: white;
+  position: relative;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+#lien{
+  color: yellow;
+  text-decoration: none;
+}
+#intro{
+  position: relative;
+  text-align: center;
+  color: white;
+  top: 3vh;
+  right: auto;
+  font-size: large;
+}
+#nom{
+  position: relative;
+  text-align: center;
+  color:white;
+  font-weight: bolder;
+  right: auto;
+  font-size: 35px;
+}
+
+#lab{
+  top: -5vh;
+  left: 27vw;
+  position: relative;
+  height: auto;
+}
+
+#enter{
+  top: -10vh;
+}
+#frisk{
+  position: absolute;
+  left: -90%;
+  top : -76%;
+  scale: 0.05;
+  z-index: 1;
+  }
+  
+  .popupmain{
+    position: relative;
+    z-index: 9999;
+  }
+  #popup {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #openPopup{
+    left : 0%;
+    background-color: lightgray;
+  }
+  
+  #closePopup {
+    background-color: lightgray;
+    color : black;
+    display:inline-flex;
+    margin-top: 10px;
+  }
+  
+  #audioPlayer {
+    width:15%;
+    height: 30px;
+  }

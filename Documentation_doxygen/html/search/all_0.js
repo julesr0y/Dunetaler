@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['_23_23_20cette_20documentation_20est_20destinée_20à_20usage_20interne_20_3a_20le_20client_20n_27en_20aura_20normalement_20pas_20l_27usage_20et_20ne_20devrait_20jamais_20avoir_20à_20la_20consulter_2e_20elle_20contient_20les_20standards_20partagés_20entre_20le_20code_20c_20et_20php_20pour_20garantir_20une_20uniformité_20du_20code_20_28et_20faciliter_20le_20transfert_20des_20données_20entre_20les_20différents_20programmes_29_0',['## Cette documentation est destinée à usage interne : le client n&apos;en aura normalement pas l&apos;usage et ne devrait jamais avoir à la consulter. Elle contient les standards partagés entre le code C et PHP pour garantir une uniformité du code (et faciliter le transfert des données entre les différents programmes)',['../md_code_standards.html',1,'']]]
+];

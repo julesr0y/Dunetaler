@@ -1,0 +1,82 @@
+/*Insertion de la police, ne pas modifier*/
+@font-face {
+    font-family: 'arKkos';
+    src: url('../font/arkkos_gmimi-webfont.woff2') format('woff2'),
+         url('../font/arkkos_gmimi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+   
+  *{
+    font-family: 'arKkos';
+    font-size: 30px;
+  }
+  body {
+    background-color: black;
+}
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: column;
+    gap: 25%;
+    justify-content: center;
+    width: 100%;
+}
+.container{
+    text-align: center;
+}
+.container2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 10%;
+}
+#exit {
+    position: relative ;
+    left : 0%;
+    top : -30%;
+    color : gray;
+    font-size : 20px;
+}
+#boutonesc {
+    font-size: 15px;
+}
+.welcome {
+    color: white;
+    font-size: 35px;
+}
+.form {
+    font-size: smaller;
+}
+#idemail {
+    color: white;
+}
+#idmdp {
+    color: white;
+}
+.email, .mdp {
+    border-radius: 20px;
+    background-color: black;
+    color: blue;
+}
+.mdp {
+    max-width: 40%;
+}
+.connexion {
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: greenyellow;
+    align-self: center;
+}
+.oublie {
+    color: white;
+}
+.noob {
+    color: white;
+}
+.error {
+    color: red;
+}

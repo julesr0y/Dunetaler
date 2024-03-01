@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../style/setting.css">
+        <link rel="icon" href="../img/logo_descente_studio.webp">
+        <meta name="viewport" content="width=device-witdh, initial-scale=1">
+        <link rel="icon" href="../img/dunetaler_logo.png">
+        <title>Dunetaler - Settings</title>
+        <style>
+          #game_volume{
+            color: green;
+            background-color: green;
+            scrollbar-color: green;
+          }
+        </style>
+        <script>
+          window.onload = function() {
+            var resolution = screen.width + "x" + screen.height;
+            document.getElementById("resolution").innerHTML = resolution;
+          };
+          function checkWindowMode() {
+            var isFullscreen = window.innerWidth === screen.width && window.innerHeight === screen.height;
+            var isMaximized = window.innerWidth === window.screen.availWidth && window.innerHeight === window.screen.availHeight;
+            var isMinimized = document.visibilityState === "hidden";
+            
+            var modeMessage = document.getElementById("window-mode");
+            
+            if (isFullscreen) {
+                modeMessage.innerHTML = "FullScreen";
+            } else if (isMaximized) {
+                modeMessage.innerHTML = "MaxScreen";
+            } else if (isMinimized) {
+                modeMessage.innerHTML = "MinScreen";
+            } else {
+                modeMessage.innerHTML = "Windowed";
+            }
+          }
+
+        window.addEventListener("resize", checkWindowMode);
+        window.addEventListener("load", checkWindowMode);
+        document.addEventListener("visibilitychange", checkWindowMode);
+
+        function setVolume() {
+            var volume = document.getElementById("volume").value;
+            var volumeFill = document.getElementById("volume-fill");
+            volumeFill.style.width = volume + "%";
+        }
+        
+        function setMusicVolume() {
+            var volume = document.getElementById("music_volume").value;
+            var player = document.getElementById("player");
+            player.volume = volume / 100; // Convertir la valeur de 0-100 en plage de volume 0.0-1.0
+        }
+        </script>
+    </head>
+<body class="body">
+  <p id="exit">
+    Press <button onclick="history.back()" id="boutonesc">esc</button>
+    <br>
+    to go back
+  </p>
+  <div class="conteneur">
+    <p id='tete'>
+      <span class="title">Settings</span>
+      <br>
+      <br>
+      <span>Music Volume : <input type="range" id="music_volume" min="0" max="100" value="0" step="1" oninput="setMusicVolume()"></span>
+      <br>
+      <span>Resolution : <span id="resolution"></span></span>
+      <br>
+      <span >Window Mode : <span id="window-mode"></span></span> 
+    </p>
+  </div>
+      <p><img src="../img/frisk_front.webp" alt="frisk" id="frisk_front">To move press arrows : <div class="pos"><p id="haut"> 🡡 </p><p id="bas"> 🡣 </p><p id="gauche"> 🡠 </p><p id="droite"> 🡢 </p></div></p>
+  <audio id="player" autoplay loop >
+     <source src="../musics/accueil.ogg" type="audio/ogg">
+  </audio>
+    </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="../scripts/settings.js"></script>
+<script>
+ document.addEventListener("keydown", function(event) {
+  const box = document.getElementById("gauche");
+  switch(event.keyCode) {
+    case 37: // Flèche gauche
+      box.style.color = "blue";
+      break;
+  }
+  setTimeout(function() {
+    box.style.color = "white";
+  }, 250);
+});
+  document.addEventListener("keydown", function(event) {
+  const box = document.getElementById("droite");
+
+  switch(event.keyCode) {
+    case 39: // Flèche droite
+      box.style.color = "blue";
+      break;
+  }
+  setTimeout(function() {
+    box.style.color = "white";
+  }, 250);
+});
+document.addEventListener("keydown", function(event) {
+  const box = document.getElementById("haut"); 
+
+  switch(event.keyCode) {
+    case 38: // Flèche haut
+      box.style.color = "blue";
+      break;
+  }
+  setTimeout(function() {
+    box.style.color = "white";
+  }, 250);
+});
+document.addEventListener("keydown", function(event) {
+  const box = document.getElementById("bas");
+
+  switch(event.keyCode) {
+    case 40: // Flèche bas
+      box.style.color = "blue";
+      break;
+  }
+  setTimeout(function() {
+    box.style.color = "white";
+  }, 250);
+});
+
+</script>
+<script>
+  document.addEventListener('keydown', function(event) {
+      if(event.keyCode == 27) {
+          history.back();
+      }
+  });
+</script>
+</html>

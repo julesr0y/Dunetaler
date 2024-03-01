@@ -1,0 +1,148 @@
+/*Insertion de la police, ne pas modifier*/
+@font-face 
+{
+    font-family: 'arKkos';
+    src: url('../font/arkkos_gmimi-webfont.woff2') format('woff2'),
+         url('../font/arkkos_gmimi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'arKkos';
+    font-size: 30px;
+    color: white;
+}
+
+body 
+{
+    /* on place le background-color dans body pour éviter d'interférer avec l'image du joueur */
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . ."
+                         ". time ."
+                         ". grid-container ."
+                         ". status ."
+                         ". . .";
+    height: 95vh;
+    position: relative;
+}
+
+.text
+{
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container
+{
+  grid-area: grid-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grille {
+    display: grid;
+  }
+  
+.case {
+    position: relative;
+}
+
+.point {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.joueur{
+    height: 40px;
+    width: auto;
+}
+
+.time{
+    grid-area: time;
+    text-align: center;
+}
+
+.status{
+    grid-area: status;
+    text-align: center;
+}
+
+.dialog{
+    background-color: black;
+    border: solid white;
+    position: absolute;
+    max-width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    padding: 2%;
+    display: none;
+}
+
+.dialog > button{
+    border: none;
+    background-color: black;
+}
+
+/* Animation de fondu */
+.fade-out {
+    animation: fade-out 5s; /* Animation de 8 secondes avec état final persistant */
+}
+
+/* Définition de l'animation */
+@keyframes fade-out {
+    0% {
+        opacity: 1; /* Opacité initiale de 1 */
+        background-color: black; /* Fond noir */
+    }
+    100% {
+        opacity: 0; /* Opacité finale de 0 */
+        background-color: white; /* Fond blanc */
+    }
+}
+
+/* Style du bouton */
+#fadeButton {
+    margin-top: 20px;
+}
+
+.green{
+    color: rgb(156, 255, 121);
+}
+
+.pink{
+    color: rgb(255, 192, 192);
+}
+
+.red{
+    color: rgb(255, 64, 64);
+}
+
+.blue{
+    color: rgb(64, 64, 255);
+}
+
+.purple{
+    color: rgb(192, 0, 192);
+}
+
+.orange{
+    color: rgb(255, 193, 74);
+}
+
+.yellow{
+    color: rgb(255, 255, 128);
+}

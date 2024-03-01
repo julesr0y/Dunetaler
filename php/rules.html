@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style/rules.css">
+        <!-- <link rel="stylesheet" href="../style/screen_size.css"> -->
+        <link rel="icon" href="../img/dunetaler_logo.png">
+        <title>Dunetaler - Rules</title>
+    </head>
+<body>
+    <p id="exit">
+        Press <button onclick="history.back()" id="boutonesc">esc</button>
+        <br>
+        to go back
+    </p>
+    <div class="title">The Rules</div>
+            <br>
+            <div class="rules">
+                <section><span style=" color:greenyellow;">Green</span> | You start the levels on this color and you have to finish on the other one</section>
+                <section><span style=" color:pink;">Pink</span> | No effect, can be passed through</section>
+                <section><span style=" color:red;">Red</span> | Blocks movement, acts as a wall</section>
+                <section><span style=" color:blue;">Blue</span> | If the player's scent is <span style=" color:orange;">Orange</span>, acts as a wall. Else, can be passed through</section>
+                <section><span style=" color:purple;">Purple</span> | Teleport tile, makes the player slide to the next tile, or bounce if the next tile is a wall, also changes the player's scent to <span style=" color: purple;">Lemon</span></section>
+                <section><span style=" color:orange;">Orange</span> | Changes the player's scent to <span style=" color:orange;">Orange</span></section>
+            </div>
+</body>
+<!-- <div class="screen-error" style="display: none;">
+    <p>Your device's screen is too small to run Dunetaler</p>
+</div> -->
+<script>
+    document.addEventListener('keydown', function(event) {
+        if(event.keyCode == 27) {
+            history.back();
+        }
+    });
+</script>
+</html>

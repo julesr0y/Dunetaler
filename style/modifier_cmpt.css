@@ -1,0 +1,73 @@
+/*Insertion de la police, ne pas modifier*/
+@font-face {
+  font-family: 'arKkos';
+  src: url('../font/arkkos_gmimi-webfont.woff2') format('woff2'),
+       url('../font/arkkos_gmimi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+ 
+body /* règle la taille du texte */
+{
+  background-color: black;
+}
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-flow: column;
+  gap: 25%;
+  justify-content: center;
+  width: 100%;
+}
+*{
+  font-family: 'arKkos';  
+}
+span{
+  position: relative;
+  color: blue;
+  font-size: x-large;
+  white-space : nowrap;
+}
+form{
+  text-align: center;
+}
+input{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  margin: 10px 10px 10px 10px;
+  font-size: x-large;
+}
+p{
+  color: orange;
+  position: relative;
+  text-align: start;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+label{
+  color: white;
+}
+#exit{
+  color: gray;
+  font-size:20px;
+  align-items: start;
+  position: relative;
+  left : 0%;
+  top : -30%;
+}
+#boutonesc{
+  font-size: 15px;
+}
+
+#bouton{
+  position: relative;
+  font-size: x-large;
+  background-color: black;
+  color: green;
+}
+#username, #mdp{
+  text-align: center;
+}

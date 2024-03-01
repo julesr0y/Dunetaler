@@ -1,0 +1,67 @@
+/*Insertion de la police, ne pas modifier*/
+@font-face {
+  font-family: 'arKkos';
+  src: url('../font/arkkos_gmimi-webfont.woff2') format('woff2'),
+       url('../font/arkkos_gmimi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+ *{
+  font-family: 'arKkos';  
+  font-size: 30px;
+}
+body /* rÃ¨gle la taille du texte */
+{
+  background-color: black;
+}
+.conteneur{
+  position: relative;
+  left: 50%;
+  border-color: white;
+  display: flex;
+}
+.form{
+  position: relative;
+  top : 70%;
+  text-align: center
+}
+div{
+  color: white;
+  font-size: x-large;
+  display : inline;
+  white-space: nowrap;
+}
+p{
+  color: white;
+  position: relative;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+span{
+  color:blue;
+  display : inline;
+}
+a{
+  color: orange;
+  text-decoration: none;
+}
+#deconnect{
+  position: relative;
+  left: 45%;
+  top : 30%;
+  color: red;
+}
+
+#exit {
+  position: relative ;
+  left : -46%;
+  top : -8%;
+  color : gray;
+  font-size : 20px;
+}
+#boutonesc {
+  font-size: 15px;
+}

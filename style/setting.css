@@ -1,0 +1,99 @@
+/*Insertion de la police, ne pas modifier*/
+@font-face {
+  font-family: 'arKkos';
+  src: url('../font/arkkos_gmimi-webfont.woff2') format('woff2'),
+       url('../font/arkkos_gmimi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+ 
+body /* règle la taille du texte */
+{
+  background-color: black;
+  font-family: 'verdana';
+  width: 90%;
+}
+.title{
+  font-size: 30px;
+  text-decoration: underline;
+}
+.conteneur{
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#exit{
+  position: relative;
+  left: -45%;
+  top: -30%;
+  color: gray;
+  font-size:20px;
+}
+#boutonesc{
+  font-size: 15px;
+}
+
+#tete{
+  text-align: center;
+}
+
+p{
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+p>span{
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+}
+#resolution{
+  color: blue;
+}
+#window-mode{
+  color: blue;
+}
+*{
+  font-family: 'arKkos';  
+}
+.arrows{
+  position: relative;
+  color: white;
+}
+#frisk_front{
+  position: relative;
+  width: 2.4%;
+  left :-4%;
+  top : -3%;
+}
+.pos{
+  position:absolute;
+  width: 20%;
+  left: 60%;
+  display: grid;
+    grid-template-columns: (7, 1);
+    grid-template-rows: (3, 1);
+    grid-template-areas:
+      ". . . haut . . ."
+      ". . gauche . droite  . ."
+      ".  . . bas . . .";
+  top: 40%;
+}
+#haut{
+  grid-area: haut;
+}
+#gauche{
+  grid-area: gauche;
+}
+#droite{
+  grid-area: droite;
+}
+#bas{
+  grid-area: bas;
+}
